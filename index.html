@@ -5,8 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- Vue.JS v2.6.0 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>    
 </head>
 <body>
+        <div id="my-blog-post-demo">
+            <blog-post
+                v-for="post in posts"
+                v-bind:key="post.id"
+                v-bind:post="post">
+            </blog-post>
+        </div>
         <!-- Site Vue Scripts -->
         <script src="assets/vue-scripts.js"></script>
 </body>
