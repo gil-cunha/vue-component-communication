@@ -10,13 +10,15 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>    
 </head>
 <body>
-        <div id="my-blog-post-demo">
+        <div id="my-blog-post-demo" :style="{ fontSize: postFontSize + 'em'}">
             <blog-post
                 v-for="post in posts"
                 v-bind:key="post.id"
-                v-bind:post="post">
+                v-bind:post="post"
+                v-on:enlarge-text="onEnlargeText">
             </blog-post>
         </div>
+        
         <!-- Site Vue Scripts -->
         <script src="assets/vue-scripts.js"></script>
 </body>
